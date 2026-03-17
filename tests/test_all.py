@@ -2,7 +2,7 @@ import pytest
 from scripts.stat_calculation import (get_median_coffe_report,
                                       get_mean_coffe_report,
                                       get_mode_coffe_report)
-from scripts.main_functions import run
+
 
 @pytest.mark.parametrize("test_input,expected", [
     ({'Иванов И. И.': [200, 500, 600, 100]}, [['Иванов И. И.', 350.0]]),

@@ -1,7 +1,11 @@
 # Виртуальное окружение
 .venv/
+venv/
 env/
 
 
 # Другие временные файлы Python
 __pycache__/
+.pytest_cache/
+logs/
+*.log
