@@ -13,7 +13,8 @@ venv\Scripts\activate
 # Устанавливаем зависимости из requirements.txt
 pip install -r requirements.txt
 
-# Запустить один из вариантов скрипта парметр --output дает возможность выгрузить отчет в txt
+# Запустить один из вариантов скрипта 
+# парметр --output дает возможность выгрузить отчет в txt
 python main.py --files resourses/math.csv resourses/programming.csv resourses/physics.csv  --output report.txt
 
 # Для запуска тестов запустить
