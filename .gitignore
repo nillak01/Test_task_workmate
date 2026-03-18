@@ -7,5 +7,6 @@ env/
 # Другие временные файлы Python
 __pycache__/
 .pytest_cache/
+.coverage
 logs/
 *.log
