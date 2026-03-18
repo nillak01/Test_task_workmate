@@ -4,7 +4,7 @@ from tabulate import tabulate
 from scripts.logger import logging
 
 
-def get_pars():
+def get_pars(args=None):
     # Создаем парсер
     parser = argparse.ArgumentParser(
         description='Мой скрипт для обработки данных'
@@ -17,16 +17,15 @@ def get_pars():
                         help='Название файла для сохранения отчета')
 
     # Парсим аргументы
-    return parser.parse_args()
+    return parser.parse_args(args)
 
 
-def process_cli_parser():
+def process_cli_parser(args_base=None):
 
-    args = get_pars()
+    args = get_pars(args_base)
     if not (args.files):
         logging.critical(
-            """Критическая ошибка: не указан ни один файл.
-                Отчет не может быть построен""")
+            """Критическая ошибка: не указан ни один файл. Отчет не может быть построен""")
         sys.exit(1)
 
     # Задаем название для отчета по умолчанию
@@ -35,8 +34,7 @@ def process_cli_parser():
     else:
         report_name = 'median-coffee'
         logging.warning(
-            """Report не указан.
-            Название устанавливается по умолчанию median-coffee""")
+            """Report не указан. Название устанавливается по умолчанию median-coffee""")
     output = args.output
     if (output is not None):
         output = output if output.find('.') != -1 else output + '.txt'

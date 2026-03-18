@@ -5,7 +5,7 @@ from scripts.processing_csv import read_csv
 from scripts.cli import process_cli_parser, show_table
 
 
-def run():
+def run(args=None):
 
     reports_dict = {
         'median-coffee': get_median_coffe_report,
@@ -14,7 +14,7 @@ def run():
         'another': get_median_coffe_report,
     }
 
-    files, report_name, output = process_cli_parser()
+    files, report_name, output = process_cli_parser(args)
     # Заголовки столбцов для вывода
     headers = ["student", report_name]
     students_dict = read_csv(files)

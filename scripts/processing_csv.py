@@ -3,7 +3,7 @@ from collections import defaultdict
 from scripts.logger import logging
 
 
-def read_csv(files: list):
+def read_csv(files: list) -> dict:
 
     students_dict = defaultdict(list)
 

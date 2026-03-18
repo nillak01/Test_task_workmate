@@ -18,3 +18,6 @@ python main.py --files resourses/math.csv resourses/programming.csv resourses/ph
 
 # Для запуска тестов запустить
 pytest -vv  
+
+# Для проверки покрытия тестов
+pytest --cov=scripts tests/
